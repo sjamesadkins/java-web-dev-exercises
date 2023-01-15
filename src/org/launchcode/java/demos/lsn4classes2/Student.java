@@ -36,6 +36,8 @@ public class Student {
 
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
+        this.numberOfCredits = courseCredits;
+        this.gpa = gpa;
         // Update the appropriate fields: numberOfCredits, gpa
     }
 
@@ -78,12 +80,12 @@ public class Student {
     }
 
     public static void main(String[] args) {
-        Student sally = new Student("Sally",1,1,4.0);
-        System.out.println("The Student class works! " + sally.getName() + " is a student!");
-        System.out.println(sally);
-        sally.addGrade(12, 3.5);
-        System.out.println(sally);
-        sally.addGrade(25, 3.8);
-        System.out.println(sally);
+        Student sam = new Student("Sam",1,1,4.0);
+        System.out.println("The Student class works! " + sam.getName() + " is a student!");
+        System.out.println(sam.gpa);
+        sam.addGrade(12, 3.5);
+        System.out.println(sam.numberOfCredits);
+        sam.addGrade(25, 3.8);
+        System.out.println(sam.numberOfCredits);
     }
 }
